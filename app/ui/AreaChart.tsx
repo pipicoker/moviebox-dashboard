@@ -1,8 +1,11 @@
 "use client";
+import dynamic from 'next/dynamic';
+
 import React, {useState} from 'react';
-import ReactApexChart from 'react-apexcharts';
+// import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts'; 
 import { HiOutlineDotsVertical } from "react-icons/hi";
+const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 
 const AreaChart = () => {

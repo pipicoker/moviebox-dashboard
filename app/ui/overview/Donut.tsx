@@ -1,8 +1,11 @@
 "use client"
+import dynamic from 'next/dynamic';
+
 import React, {useState} from 'react'
-import ReactApexChart from 'react-apexcharts';
+// import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts'; // Import ApexOptions type
 
+const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 const Donut = () => {
     const [options] = useState<ApexOptions>({

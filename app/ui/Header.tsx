@@ -13,6 +13,7 @@ const Header = () => {
             <Image
             src={logo}
             alt='logo'
+            priority
             />
 
             <div className='ml-8'>

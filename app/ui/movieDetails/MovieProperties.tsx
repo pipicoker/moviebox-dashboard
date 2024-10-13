@@ -138,7 +138,7 @@ const MovieProperties = () => {
                 <div className='flex'>|||||| <span className='text-gray-300'>|||</span></div>
                 
                 <div className='flex items-center space-x-2' >
-                <Image src={trend} alt='trend icon'/>
+                <Image src={trend} alt='trend icon' width={18} height={18}/>
                 <div className='text-xs text-[#7281D3] font-semibold'>Trending</div>
                 </div>
           </div>

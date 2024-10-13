@@ -185,7 +185,7 @@ const MoviesBody = () => {
         <div className='flex space-x-2'>
           <div className='flex'>|||||| <span className='text-gray-300'>|||</span></div>
           <div className={`${movie.vote_count >= 200 ? 'flex items-center space-x-2' : 'hidden'}`}>
-            <Image src={trend} alt='trend icon'/>
+            <Image src={trend} alt='trend icon' width={18} height={18}/>
             <div className='text-xs text-[#7281D3] font-semibold'>Trending</div>
           </div>
         </div>
