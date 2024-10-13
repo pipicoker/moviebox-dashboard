@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import logo from '../../public/Logo.jpg'
-import avatar from '../../public/avatar.jpg'
+import logo from '@/public/Logo.jpg'
+import avatar from '@/public/Avatar.jpg'
 import NavLinks from './NavLinks'
 import { CiSettings } from "react-icons/ci";
 import { IoIosNotificationsOutline } from "react-icons/io";
