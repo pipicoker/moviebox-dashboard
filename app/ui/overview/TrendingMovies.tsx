@@ -10,7 +10,6 @@ import ViewBtn from '../ViewBtn'
 const TrendingMovies: React.FC = () => {
 
     const {popularMovies, loading, error, fetchPopularMoviesDetails} = usePopularMovieStore()
-    const [filteredData, setFilteredData] = useState<string[]>([]); // Example state for search results
 
 
     const [showAllMovies, setShowAllMovies] = useState(false)
@@ -112,9 +111,9 @@ const TrendingMovies: React.FC = () => {
         }
       };
 
-      const handleViewClick = (movie: any) => {
-        alert(`viewing details for movie: ${movie.title}`)
-      }
+      // const handleViewClick = (movie: any) => {
+      //   alert(`viewing details for movie: ${movie.title}`)
+      // }
 
      // Helper function to get the correct ordinal suffix
     const getOrdinal = (day: number) => {
@@ -174,12 +173,11 @@ const TrendingMovies: React.FC = () => {
     const displayedMovies = showAllMovies ? selectedData : selectedData.slice(7, 11)
 
 
-    const handleSearch = (query: string) => {
-        // Example search function: filter data based on the search query
-        const sampleData = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry'];
-        const filtered = sampleData.filter((item) => item.toLowerCase().includes(query.toLowerCase()));
-        setFilteredData(filtered);
-    };
+    // const handleSearch = (query: string) => {
+    //     // Example search function: filter data based on the search query
+    //     const sampleData = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry'];
+    //     const filtered = sampleData.filter((item) => item.toLowerCase().includes(query.toLowerCase()));
+    // };
 
   return (
     <div>
@@ -188,7 +186,7 @@ const TrendingMovies: React.FC = () => {
         <TitleAndSearch 
           heading='Trending movies'
           paragraph='Keep track of the trending movies on moviebox'
-          onSearch={handleSearch}/>
+          />
       </div>
 
       <div className='border rounded-lg'>

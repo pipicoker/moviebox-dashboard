@@ -91,6 +91,8 @@ export const usePopularMovieStore = create<PopularmovieState>((set) => ({
       // Set the detailed movies in the store
       set({ popularMovies: detailedMovies, loading: false, error: null });
         } catch (error) {
+          console.error(error);
+          
             set({ loading: false, error: 'Failed to fetch movie details' });
 
         }
@@ -126,6 +128,7 @@ export const useUpcomingMovieStore = create<UpcomingmovieState>((set) => ({
       // Set the detailed movies in the store
       set({ upcomingMovies: detailedMovies, loading: false, error: null });
         } catch (error) {
+          console.error(error);
             set({ loading: false, error: 'Failed to fetch movie details' });
 
         }

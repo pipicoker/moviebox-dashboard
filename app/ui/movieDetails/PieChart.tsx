@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';  
 import AudienceSubTopics from './AudienceSubTopics';
 
 const PieChart = () => {
-  const [series, setSeries] = useState([31, 68]);
+  const series = [31, 68];
 
-  const [options, setOptions] = useState<ApexOptions>({
+  const options: ApexOptions = {
     chart: {
       width: 159,
       type: 'pie',
@@ -22,8 +22,6 @@ const PieChart = () => {
         gradientToColors: ['#8B9FE8', '#E681D8', '#FFA9A4', '#FED2CE', '#FED2CE'],
         // Gradient stops for Men slice
         inverseColors: false,
-        // opacityFrom: 0.9,
-        // opacityTo: 0.9,
         stops: [0, 20, 40, 60, 80, 100],
       },
     },
@@ -42,13 +40,12 @@ const PieChart = () => {
         },
       },
     ],
-  });
+  };
 
   return (
-    <div className='p-6 border rounded-lg '>
+    <div className='p-6 border rounded-lg'>
       <AudienceSubTopics topic='Gender' />
       <div id="chart">
-
         <ReactApexChart options={options} series={series} type="pie" width={380} />
       </div>
     </div>

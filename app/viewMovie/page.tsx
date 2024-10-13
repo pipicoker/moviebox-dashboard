@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image';
-import { useViewMovieStore } from '../_store/viewMovieStore'
+import { UseViewMovieStore } from '../_store/viewMovieStore'
 import Heading from '../ui/Heading';
 import AreaChart from '../ui/AreaChart';
 import MovieProperties from '../ui/movieDetails/MovieProperties';
@@ -9,7 +9,7 @@ import Audience from '../ui/movieDetails/Audience';
 import SimilarMovies from '../ui/movieDetails/SimilarMovies';
 
 const page = () => {
-  const {movieDetails, selectedImage} = useViewMovieStore()
+  const {movieDetails, selectedImage} = UseViewMovieStore()
   
   if (!movieDetails) {
     return <div>No movie selected</div>;

@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { useViewMovieStore } from '../_store/viewMovieStore'
+import { UseViewMovieStore } from '../_store/viewMovieStore'
 import { MovieDetails } from '../_store/viewMovieStore'
 
 interface ViewBtnProps {
@@ -8,7 +8,7 @@ interface ViewBtnProps {
     image: string
   }
 const ViewBtn: React.FC<ViewBtnProps> = ({movie, image}) => {
-    const {  setMovieDetails } = useViewMovieStore();
+    const {  setMovieDetails } = UseViewMovieStore();
 
     const handleViewClick = () => {
         setMovieDetails(movie, image);

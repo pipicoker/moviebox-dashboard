@@ -10,7 +10,7 @@ import ViewBtn from '../ViewBtn'
 
 const UpcomingMovies: React.FC = () => {
     const {upcomingMovies, loading, error, fetchUpcomingMoviesDetails} = useUpcomingMovieStore()
-    const [filteredData, setFilteredData] = useState<string[]>([]); // Example state for search results
+    
 
 
     const [showAllMovies, setShowAllMovies] = useState(false)
@@ -173,12 +173,11 @@ const UpcomingMovies: React.FC = () => {
     const displayedMovies = showAllMovies ? selectedData : selectedData.slice(0, 4)
 
 
-    const handleSearch = (query: string) => {
-        // Example search function: filter data based on the search query
-        const sampleData = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry'];
-        const filtered = sampleData.filter((item) => item.toLowerCase().includes(query.toLowerCase()));
-        setFilteredData(filtered);
-    };
+    // const handleSearch = (query: string) => {
+    //     // Example search function: filter data based on the search query
+    //     const sampleData = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry'];
+    //     const filtered = sampleData.filter((item) => item.toLowerCase().includes(query.toLowerCase()));
+    // };
 
   return (
     <div className='mt-16 '>
@@ -186,7 +185,7 @@ const UpcomingMovies: React.FC = () => {
           <TitleAndSearch 
           heading='Upcoming movie premiers'
           paragraph='Keep track of the upcoming movie premiers'
-          onSearch={handleSearch}/>
+          />
         </div>
 
       <div className='border rounded-lg'>

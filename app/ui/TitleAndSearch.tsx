@@ -4,16 +4,14 @@ import React, { useState } from 'react'
 interface ReusableComponentProps {
     heading: string; // Text for the  <h2> element
     paragraph: string; // Text for the  <p> element
-    onSearch: (query: string) => void; // Function to handle search input changes
 }
 
-const TitleAndSearch: React.FC<ReusableComponentProps> = ({heading, paragraph, onSearch}) => {
+const TitleAndSearch: React.FC<ReusableComponentProps> = ({heading, paragraph}) => {
     const [searchQuery, setSearchQuery] = useState('')
 
     const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         setSearchQuery(value);
-        onSearch(value); // Call the search handler prop when input changes
     };
   return (
     <div className=' mb-6 flex justify-between items-center'>

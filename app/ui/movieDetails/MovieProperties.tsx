@@ -2,11 +2,11 @@ import { useState } from 'react'
 import Image from 'next/image'
 import MovieDetailsTable from './MovieDetailsTable'
 import MovieDetailsHeading from './MovieDetailsHeading'
-import { useViewMovieStore } from '@/app/_store/viewMovieStore'
+import { UseViewMovieStore } from '@/app/_store/viewMovieStore'
 import trend from '../../../public/trend.jpg'
 
 const MovieProperties = () => {
-    const {movieDetails} = useViewMovieStore()
+    const {movieDetails} = UseViewMovieStore()
 
     // Check if movieDetails is null
   if (!movieDetails) {

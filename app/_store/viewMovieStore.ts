@@ -55,7 +55,7 @@ interface ViewMovieState {
     setMovieDetails: (movie: MovieDetails, image: string) => void; // Update the function signature
   }
 
-  export const useViewMovieStore = create<ViewMovieState>((set) => ({
+  export const UseViewMovieStore = create<ViewMovieState>((set) => ({
     movieDetails: null,
     selectedImage: null, // Initialize selectedImage
     setMovieDetails: (newMovie: MovieDetails, image: string) =>

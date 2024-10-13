@@ -136,9 +136,9 @@ const MoviesBody = () => {
       };
     
 
-      const handleViewClick = (movie: any) => {
-        alert(`viewing details for movie: ${movie.title}`)
-      }
+      // const handleViewClick = (movie: any) => {
+      //   alert(`viewing details for movie: ${movie.title}`)
+      // }
 
        // Helper function to get the correct ordinal suffix
     const getOrdinal = (day: number) => {
@@ -206,19 +206,18 @@ const MoviesBody = () => {
     // Only show the first four movies if not showing all
     const displayedMovies = showAllMovies ? selectedData : selectedData.slice(0, 13)
 
-    const handleSearch = (query: string) => {
-        // Example search function: filter data based on the search query
-        const sampleData = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry'];
-        const filtered = sampleData.filter((item) => item.toLowerCase().includes(query.toLowerCase()));
-        // setFilteredData(filtered);
-    };
+    // const handleSearch = (query: string) => {
+    //     // Example search function: filter data based on the search query
+    //     const sampleData = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry'];
+    //     const filtered = sampleData.filter((item) => item.toLowerCase().includes(query.toLowerCase()));
+    //     // setFilteredData(filtered);
+    // };
   return (
     <div>
       <div className='mt-8'>
         <TitleAndSearch 
           heading='Collection of all movies'
           paragraph='Keep track of all movies on moviebox'
-          onSearch={handleSearch}
           />
       </div>
         

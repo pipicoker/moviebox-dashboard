@@ -160,9 +160,9 @@ const SimilarMovies = () => {
     })
 
     // Function to shuffle the array
-const shuffleArray = (array: any) => {
-    return array.sort(() => Math.random() - 0.5);
-  };
+    const shuffleArray = (array: any) => {
+      return array.sort(() => Math.random() - 0.5);
+    };
   
   // Shuffle the array and pick the first 3 movies
   const displayedMovies = shuffleArray(selectedData).slice(0, 3);
