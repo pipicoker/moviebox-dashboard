@@ -7,7 +7,7 @@ const UserLogins = () => {
     <div className=' h-[364px] relative  border rounded-xl'>
         <div className='p-6'>
             <div className='flex justify-between items-center font-medium'>
-                <h2>Today's user logins</h2>
+                <h2>Today&apos;s user logins</h2>
                 <HiOutlineDotsVertical />
 
             </div>

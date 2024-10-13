@@ -1,7 +1,7 @@
-import { useState } from 'react'
 import MovieDetailsTable from './MovieDetailsTable'
 import MovieDetailsHeading from './MovieDetailsHeading'
 import { UseViewMovieStore } from '@/app/_store/viewMovieStore'
+import { DetailsTableRow } from './MovieDetailsTable'
 const InterestTracking = () => {
     const {movieDetails} = UseViewMovieStore()
 
@@ -11,7 +11,7 @@ const InterestTracking = () => {
   }
 
     // Define columns with display names
-  const columns = [
+    const columns: { title: string; key: keyof DetailsTableRow }[] = [
     { title: 'People Reached', key: 'PeopleReached' },
     { title: 'Content Interactions', key: 'ContentInteractions' },
     { title: 'Impressions', key: 'Impressions' },

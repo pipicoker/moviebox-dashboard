@@ -1,8 +1,19 @@
-import React from 'react';
+export interface DetailsTableRow {
+    Category?: React.ReactNode;
+    Watchlists?: number;
+    Owner?: string;
+    Streams?: number;
+    PeopleReached?: number;
+    ContentInteractions?: number;
+    Impressions?: number;
+    Shares?: number;
+    Likes?: number;
+    ReleaseDate?: React.ReactNode;
+  }
 
 interface TableProps {
-    columns: { title: string; key: string }[];
-    data: Record<string, any>[];
+  columns: { title: string; key: keyof DetailsTableRow }[];
+  data: DetailsTableRow[];
 }
 
 const MovieDetailsTable: React.FC<TableProps> = ({ columns, data }) => {

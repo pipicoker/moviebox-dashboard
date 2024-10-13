@@ -6,6 +6,7 @@ import TitleAndSearch from '../TitleAndSearch'
 // import {useMovieStore} from '../../_store/'
 import { usePopularMovieStore } from '@/app/_store/movieStore'
 import ViewBtn from '../ViewBtn'
+import { TableRow } from '../Table'
 
 const TrendingMovies: React.FC = () => {
 
@@ -19,7 +20,7 @@ const TrendingMovies: React.FC = () => {
     }, [fetchPopularMoviesDetails])
 
 
-    const columns = [
+    const columns: { title: string; key: keyof TableRow }[] = [
       { title: 'Name', key: 'Name' },
       { title: 'Category', key: 'Category' },
       { title: 'Watchlists', key: 'Watchlists' },

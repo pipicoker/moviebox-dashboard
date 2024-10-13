@@ -5,6 +5,7 @@ import Table from '../Table'
 import TitleAndSearch from '../TitleAndSearch'
 // import {useMovieStore} from '../../_store/'
 import { useUpcomingMovieStore } from '@/app/_store/movieStore'
+import { TableRow } from '../Table'
 
 import ViewBtn from '../ViewBtn'
 
@@ -20,13 +21,14 @@ const UpcomingMovies: React.FC = () => {
     }, [fetchUpcomingMoviesDetails])
 
 
-    const columns = [
+    const columns: { title: string; key: keyof TableRow }[] = [
       { title: 'Name', key: 'Name' },
       { title: 'Category', key: 'Category' },
       { title: 'Watchlists', key: 'Watchlists' },
       { title: 'Owner', key: 'Owner' },
       { title: 'Premier Date', key: 'PremierDate' },
     ];
+    
 
     if(loading) {
         return <div>Loading...</div>

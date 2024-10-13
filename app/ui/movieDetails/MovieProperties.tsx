@@ -4,6 +4,7 @@ import MovieDetailsTable from './MovieDetailsTable'
 import MovieDetailsHeading from './MovieDetailsHeading'
 import { UseViewMovieStore } from '@/app/_store/viewMovieStore'
 import trend from '../../../public/trend.jpg'
+import { DetailsTableRow } from './MovieDetailsTable'
 
 const MovieProperties = () => {
     const {movieDetails} = UseViewMovieStore()
@@ -14,7 +15,7 @@ const MovieProperties = () => {
   }
 
     // Define columns with display names
-  const columns = [
+    const columns: { title: string; key: keyof DetailsTableRow }[] = [
     { title: 'Category', key: 'Category' },
     { title: 'Streams', key: 'Streams' },
     { title: 'Watchlists', key: 'Watchlists' },

@@ -1,5 +1,5 @@
 'use client'
-import {useEffect, useState} from 'react'
+import {useEffect, useState, useMemo} from 'react'
 import Image from 'next/image'
 import Table from '../Table'
 import ViewBtn from '../ViewBtn'
@@ -8,16 +8,21 @@ import { useMovieStore } from '@/app/_store/buttonStore'
 import { useUpcomingMovieStore } from '@/app/_store/movieStore'
 import { usePopularMovieStore } from '@/app/_store/movieStore'
 import trend from '../../../public/trend.jpg'
+import { TableRow } from '../Table'
 
 
 
 const MoviesBody = () => {
-    const {btn} = useMovieStore()
-    const {upcomingMovies, loading, error, fetchUpcomingMoviesDetails} = useUpcomingMovieStore()
-    const {popularMovies,  fetchPopularMoviesDetails} = usePopularMovieStore()
-    const allMovies = (upcomingMovies.concat(popularMovies))
+  const { btn } = useMovieStore();
+  const { upcomingMovies, loading, error, fetchUpcomingMoviesDetails } = useUpcomingMovieStore();
+  const { popularMovies, fetchPopularMoviesDetails } = usePopularMovieStore();
 
-    const [movies, setMovies] = useState(allMovies)
+  // Memoize allMovies to avoid unnecessary recalculations
+  const allMovies = useMemo(() => {
+      return [...upcomingMovies, ...popularMovies];
+  }, [upcomingMovies, popularMovies]);
+
+  const [movies, setMovies] = useState(allMovies);
 
     useEffect(() => {
         if(btn == 'All movies') {
@@ -42,7 +47,7 @@ const MoviesBody = () => {
       }, [fetchPopularMoviesDetails])
 
 
-      const columns = [
+      const columns: { title: string; key: keyof TableRow }[] = [
         { title: 'Name', key: 'Name' },
         { title: 'Category', key: 'Category' },
         { title: 'Popularity/Interest', key: 'Popularity' },
