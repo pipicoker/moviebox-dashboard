@@ -16,7 +16,7 @@ const ViewBtn: React.FC<ViewBtnProps> = ({movie, image}) => {
       }
   return (
     <div>
-        <Link href="/viewMovie">  
+        <Link href="../viewMovie">  
             <button
             onClick={handleViewClick}
             className="text-sm font-semibold px-4 py-2 rounded-lg border "
