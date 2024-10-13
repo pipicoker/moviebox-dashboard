@@ -1,4 +1,3 @@
-"use client"
 import Image from 'next/image';
 import { UseViewMovieStore } from '../_store/viewMovieStore'
 import Heading from '../ui/Heading';
