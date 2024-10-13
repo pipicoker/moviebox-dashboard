@@ -18,6 +18,12 @@ const page = () => {
   // Provide a default image URL in case selectedImage is null
   const defaultImage = 'https://via.placeholder.com/500'; // Use a placeholder image URL
   const imageUrl = selectedImage || defaultImage; // Use the selected image or fallback
+
+  // This check ensures any client-side code executes safely
+  if (typeof window !== 'undefined') {
+    // You can use window here
+    console.log(window.location.href); // Just an example
+  }
   return (
     <div className='px-[128px] pb-8'>
       <Heading heading={movieDetails.title}/>
