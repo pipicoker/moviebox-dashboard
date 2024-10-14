@@ -31,7 +31,7 @@ const page = () => {
 
       <div className="mt-8 max-h-[364px] grid grid-cols-7 gap-8">
           <div className="col-span-2">
-            <Image src={imageUrl} alt='movie cover' width={356} height={364} className='h-full max-h-[356px] w-auto rounded-lg'/>
+            <Image src={imageUrl} alt='movie cover' width={356} height={364} className='h-full max-h-[358px] w-[356px] rounded-lg'/>
           </div>
           
           <div className="col-span-5">
