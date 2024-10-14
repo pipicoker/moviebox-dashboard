@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logo from '@/public/Logo.jpg'
+import logo from '@/public/Logo.png'
 import avatar from '@/public/Avatar.jpg'
 import NavLinks from './NavLinks'
 import { CiSettings } from "react-icons/ci";
@@ -8,7 +8,7 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 
 const Header = () => {
   return (
-    <div className='px-[128px] py-[10px] bg-black flex items-center justify-between'>
+    <div className='px-[128px] h-[72px] bg-black flex items-center justify-between'>
         <div className='flex items-center'>
             <Image
             src={logo}

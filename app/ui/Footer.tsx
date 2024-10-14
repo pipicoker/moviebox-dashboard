@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import moviebox from '../../public/moviebox.jpg'
+import moviebox from '../../public/footer.png'
 
 const Footer = () => {
   return (
