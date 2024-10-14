@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactApexChart from 'react-apexcharts';
+import dynamic from 'next/dynamic';
 import { ApexOptions } from 'apexcharts';  
 import AudienceSubTopics from './AudienceSubTopics';
+const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 const PieChart = () => {
   const series = [31, 68];

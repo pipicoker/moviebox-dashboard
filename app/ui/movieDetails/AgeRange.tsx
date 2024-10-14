@@ -9,7 +9,7 @@ const AgeRange = () => {
         <div className='mt-8'>
           <div className=' flex  items-center justify-between text-xs font-semibold'>
                   
-                  <label htmlFor="file">18-24</label>
+                  <span >18-24</span>
                   <div className=' h-1 bg-[#F5F5F5] w-4/5'>
                     <div style={{width: `44.5%`}} className='h-1 bg-gradient-to-r from-[#35C3F3] to-[#8B9FE8] to-[#E681D8] to-[#FFA9A4] to-[#FED2CE] to-[#FED2CE] rounded-[40px]'  >
                     </div>
@@ -19,7 +19,7 @@ const AgeRange = () => {
 
           <div className='mt-8 flex  items-center justify-between text-xs font-semibold'>
                   
-                  <label htmlFor="file">25-34</label>
+                  <span >25-34</span>
                   <div className=' h-1 bg-[#F5F5F5] w-4/5'>
                     <div style={{width: `47.1%`}} className='h-1 bg-gradient-to-r from-[#35C3F3] to-[#8B9FE8] to-[#E681D8] to-[#FFA9A4] to-[#FED2CE] to-[#FED2CE] rounded-[40px]'  >
                     </div>
@@ -29,7 +29,7 @@ const AgeRange = () => {
 
           <div className='mt-8 flex  items-center justify-between text-xs font-semibold'>
                   
-                  <label htmlFor="file">35-44</label>
+                  <span >35-44</span>
                   <div className=' h-1 bg-[#F5F5F5] w-4/5'>
                     <div style={{width: `7.7%`}} className='h-1 bg-gradient-to-r from-[#35C3F3] to-[#8B9FE8] to-[#E681D8] to-[#FFA9A4] to-[#FED2CE] to-[#FED2CE] rounded-[40px]'  >
                     </div>
@@ -39,7 +39,7 @@ const AgeRange = () => {
 
           <div className='mt-8 flex  items-center justify-between text-xs font-semibold'>
                   
-                  <label htmlFor="file">45-54</label>
+                  <span >45-54</span>
                   <div className=' h-1 bg-[#F5F5F5] w-4/5'>
                     <div style={{width: `0.5%`}} className='h-1 bg-gradient-to-r from-[#35C3F3] to-[#8B9FE8] to-[#E681D8] to-[#FFA9A4] to-[#FED2CE] to-[#FED2CE] rounded-[40px]'  >
                     </div>
