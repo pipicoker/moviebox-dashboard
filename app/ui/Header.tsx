@@ -8,7 +8,7 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 
 const Header = () => {
   return (
-    <div className='px-[128px] h-[72px] bg-black flex items-center justify-between'>
+    <div className='px-[128px] max-[1280px]:px-[60px]  h-[72px] bg-black flex items-center justify-between'>
         <div className='flex items-center'>
             <Image
             src={logo}

@@ -10,7 +10,7 @@ const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false })
 const Donut = () => {
     const [options] = useState<ApexOptions>({
         chart: {
-          width: 159,
+          // width: 159,
           type: 'donut', 
         },
         plotOptions: {
@@ -48,19 +48,19 @@ const Donut = () => {
               },
         },
         
-        responsive: [
-          {
-            breakpoint: 480,
-            options: {
-              chart: {
-                width: 200,
-              },
-              legend: {
-                position: 'bottom',
-              },
-            },
-          },
-        ],
+        // responsive: [
+        //   {
+        //     breakpoint: 480,
+        //     options: {
+        //       chart: {
+        //         width: 200,
+        //       },
+        //       legend: {
+        //         position: 'bottom',
+        //       },
+        //     },
+        //   },
+        // ],
         colors: ['#35C3F3', '#8B9FE8', '#E681D8', '#FFA9A4']
       });
     

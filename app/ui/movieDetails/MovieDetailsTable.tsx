@@ -19,17 +19,7 @@ interface TableProps {
 const MovieDetailsTable: React.FC<TableProps> = ({ columns, data }) => {
     // Calculate the width for each column based on the number of columns
     const columnWidth = `${100 / columns.length}%`;
-
-    const columnStyles: { [key: string]: string } = {
-        'Name': 'text-sm font-semibold',
-        'Category': 'text-sm font-medium',
-        'Watchlists': 'text-sm font-medium',
-        'Owner': 'text-sm font-medium',
-        'PremierDate': 'text-sm font-medium',
-        'Streams': 'text-sm font-medium',
-        'ReleaseDate': 'text-sm font-medium',
-    };
-
+    
     return (
         <div className='border mt-8 rounded-lg'>
             <table className="w-full">
@@ -49,9 +39,9 @@ const MovieDetailsTable: React.FC<TableProps> = ({ columns, data }) => {
 
                 <tbody>
                     {data.map((row, rowIndex) => (
-                        <tr key={rowIndex}>
+                        <tr key={rowIndex} className="text-sm text-gray-400">
                             {columns.map((column) => (
-                                <td key={column.key} className={`p-2 text-black ${columnStyles[column.title]}`} style={{ width: columnWidth }}>
+                                <td key={column.key} className={`p-2 text-black `} style={{ width: columnWidth }}>
                                     {row[column.key]}
                                 </td>
                             ))}

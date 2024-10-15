@@ -8,7 +8,7 @@ const PieChart = () => {
 
   const options: ApexOptions = {
     chart: {
-      width: 159,
+      // width: 159,
       type: 'pie',
     },
     labels: ['68.7% Men', '31.3% Women'],
@@ -46,7 +46,7 @@ const PieChart = () => {
     <div className='p-6 border rounded-lg'>
       <AudienceSubTopics topic='Gender' />
       <div id="chart">
-        <ReactApexChart options={options} series={series} type="pie" width={380} />
+        <ReactApexChart options={options} series={series} type="pie" />
       </div>
     </div>
   );
