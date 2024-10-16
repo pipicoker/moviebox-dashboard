@@ -89,7 +89,7 @@ const AreaChart = () => {
   ];
 
   return (
-    <div className='border rounded-xl h-[364px] px-6 pt-6 pb-4'>
+    <div className='border rounded-lg h-[364px] px-6 pt-6 pb-4'>
         <div className='flex justify-between items-center'>
             <div>
                 <h2 className='font-medium'>Average watch time</h2>

@@ -6,9 +6,9 @@ import TrendingMovies from "./ui/overview/TrendingMovies";
 
 export default function Home() {
   return (
-    <div className="pb-[32px]">
+    <div className="pb-[32px] px-[128px] max-[1280px]:px-[60px]">
 
-      <div className="px-[128px] max-[1280px]:px-[80px]">
+      <div className="">
         <Heading heading="Overview"/>
 
         <div className="pt-8 max-h-[364px] grid grid-cols-12 gap-8">
@@ -23,7 +23,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-4 px-[128px] max-[1280px]:px-[80px]">
+      <div className="mt-4 ">
         <UpcomingMovies />
         <TrendingMovies />
       </div>

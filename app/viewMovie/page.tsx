@@ -22,7 +22,7 @@ const page = () => {
   // This check ensures any client-side code executes safely
   if (typeof window !== 'undefined') {
     // You can use window here
-    console.log(window.location.href); // Just an example
+    console.log(window.location.href); 
   }
   return (
     <div className='px-[128px] max-[1280px]:px-[60px] pb-8'>
