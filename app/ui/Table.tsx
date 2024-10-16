@@ -1,5 +1,4 @@
 
-
 export interface TableRow {
   Name: React.ReactNode;
   Category: React.ReactNode;
@@ -62,13 +61,14 @@ const Table: React.FC<TableProps> = ({ columns, data, hasPopularity }) => {
             ))}
           </tr>
         </thead>
+
         <tbody>
           {data.map((row, rowIndex) => (
             <tr key={rowIndex}>
               {columns.map((column) => (
                 <td
                   key={column.key}
-                  className={`p-2 ${columnStyles[column.key] || ""}`}
+                  className={`p-4 border-b ${columnStyles[column.key] || ""}`}
                 >
                   {row[column.key]}
                 </td>

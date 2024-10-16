@@ -41,7 +41,7 @@ const MovieDetailsTable: React.FC<TableProps> = ({ columns, data }) => {
                     {data.map((row, rowIndex) => (
                         <tr key={rowIndex} className="text-sm text-gray-400">
                             {columns.map((column) => (
-                                <td key={column.key} className={`p-2 text-black `} style={{ width: columnWidth }}>
+                                <td key={column.key} className={`p-4 text-black `} style={{ width: columnWidth }}>
                                     {row[column.key]}
                                 </td>
                             ))}
