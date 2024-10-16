@@ -25,7 +25,7 @@ const page = () => {
     console.log(window.location.href); 
   }
   return (
-    <div className='px-[128px] max-[1280px]:px-[60px] pb-8'>
+    <div className='bg-[#FFFFFF]  px-[128px] max-[1280px]:px-[60px] pb-8'>
       <Heading heading={movieDetails.title}/>
 
 

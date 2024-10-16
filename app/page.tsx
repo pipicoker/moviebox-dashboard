@@ -6,7 +6,7 @@ import TrendingMovies from "./ui/overview/TrendingMovies";
 
 export default function Home() {
   return (
-    <div className="pb-[32px] px-[128px] max-[1280px]:px-[60px]">
+    <div className="bg-[#FFFFFF] pb-[32px] px-[128px] max-[1280px]:px-[60px]">
 
       <div className="">
         <Heading heading="Overview"/>
