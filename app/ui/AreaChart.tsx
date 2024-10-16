@@ -12,7 +12,7 @@ const AreaChart = () => {
   // Define chart options and data
   const [options] = useState<ApexOptions> ({
     chart: {
-      height: 300,
+      // height: 300,
       type: 'area',
       toolbar: {
         show: false, // Disable toolbar icons
@@ -39,7 +39,8 @@ const AreaChart = () => {
         "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
       ],
       title: {
-        text: 'Months', // X-axis title
+        // text: 'Months', // X-axis title
+        // offsetY: -30,
         style: {
           fontSize: '14px',
           fontWeight: 500,
@@ -89,7 +90,7 @@ const AreaChart = () => {
   ];
 
   return (
-    <div className='border rounded-lg h-[364px] px-6 pt-6 pb-4'>
+    <div className='border rounded-lg max-h-[364px] px-6 pt-6 pb-8'>
         <div className='flex justify-between items-center'>
             <div>
                 <h2 className='font-medium'>Average watch time</h2>
@@ -99,7 +100,7 @@ const AreaChart = () => {
             
         </div>
         
-        <div id="chart" className='mt-4 h-[251px]'>
+        <div id="chart" className='mt-4  pb-8'>
             <div className='flex justify-end space-x-3 text-sm font-medium'>
                 <div className='flex items-center space-x-1'>
                     <div className='h-2 w-2 bg-purple-200 rounded-full'></div>
@@ -110,7 +111,7 @@ const AreaChart = () => {
                     <p>1000-10,000</p>
                 </div>
             </div>
-            <ReactApexChart options={options} series={series} type="area" height={251} />
+            <ReactApexChart options={options} series={series} type="area" height={260} />
         </div>
     </div>
     
