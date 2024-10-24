@@ -47,12 +47,12 @@ const Table: React.FC<TableProps> = ({ columns, data, hasPopularity }) => {
   return (
     <div>
       <table className="w-full">
-        <thead>
+        <thead className="border-b">
           <tr className="px-4 h-[50px] bg-[#F5F5F5]">
             {columns.map((column) => (
               <th
                 key={column.key}
-                className={`p-2 text-sm text-[#000000] text-left ${
+                className={`p-4 text-sm font-semibold text-[#000000] text-left ${
                   columnWidths[column.key] || "w-auto"
                 }`}
               >

@@ -23,12 +23,12 @@ const MovieDetailsTable: React.FC<TableProps> = ({ columns, data }) => {
     return (
         <div className='border mt-8 rounded-lg'>
             <table className="w-full">
-                <thead>
+                <thead className="border-b">
                     <tr className="px-4 h-[50px] bg-[#F5F5F5]">
                         {columns.map((column) => (
                             <th
                                 key={column.key}
-                                className="p-2 text-sm text-[#000000] text-left"
+                                className="p-2 text-sm font-semibold  text-[#000000] text-left"
                                 style={{ width: columnWidth }} // Set equal width for each header
                             >
                                 {column.title}

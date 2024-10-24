@@ -74,71 +74,76 @@ const MoviesBody = () => {
 
     // Function to return background colors for specific genres
 
-    const getGenreClass = (genre: string) => {
-        switch (genre.toLowerCase()) {
-          case 'crime':
-            return 'bg-[#D1D8F7] text-[#4755A8]';
-          case 'drama':
-            return 'bg-[#D1D8F7] text-[#4755A8]';
-          case 'comedy':
-            return 'bg-[#D1D8F7] text-[#4755A8]';
-          default:
-            return 'bg-[#D1D8F7] text-[#4755A8]'; // Default color for other genres
-        }
-      };
+     // Function to return background colors for specific genres
 
+     const getGenreClass = (genre: string) => {
+      switch (genre.toLowerCase()) {
+        case 'crime':
+          return 'bg-[#D1D8F7] ';
+        case 'drama':
+          return 'bg-[#D1D8F7]  ';
+        case 'comedy':
+          return 'bg-[#D1D8F7] ';
+        default:
+          return 'bg-[#D1D8F7] '; // Default color for other genres
+      }
+    };
+
+      
+
+
+    const GenreDisplay: React.FC<{ genres: string[] }> = ({ genres }) => {
       // Component to handle genres with "Show More" functionality
-      const GenreDisplay: React.FC<{ genres: string[] }> = ({ genres }) => {
-        const [showAll, setShowAll] = useState(false);
-    
-        // If there are more than 2 genres
-        if (genres.length > 2) {
-          return (
-            <div className="flex flex-wrap items-center">
-              {/* Display only the first genre */}
-              <span className={`rounded-full px-3 py-1 mr-2 ${getGenreClass(genres[0])}`}>
-                {genres[0].trim()}
+      const [showAll, setShowAll] = useState(false);
+      
+      // If there are more than 2 genres
+      if (genres.length > 2) {
+        return (
+          <div className="flex flex-wrap items-center uppercase font-semibold text-[#4755A8] text-[10px] ">
+            {/* Display only the first genre */}
+            <span className={`rounded-full px-4 py-1 mr-2 ${getGenreClass(genres[0])}`}>
+              {genres[0].trim()}
+            </span>
+            {/* Show "+X more" button if there are more genres */}
+            {!showAll && (
+              <button
+                onClick={() => setShowAll(true)}
+                className="text-[#4755A8] text-xs font-semibold"
+              >
+                +{genres.length - 1} more
+              </button>
+            )}
+            {/* If "Show More" is clicked, display the rest */}
+            {showAll && (
+              <>
+                {genres.slice(1).map((genre, index) => (
+                  <span
+                    key={index}
+                    className={`rounded-full px-4 py-1 mr-2 my-2 ${getGenreClass(genre)}`}
+                  >
+                    {genre.trim()}
+                  </span>
+                ))}
+              </>
+            )}
+          </div>
+        );
+      } else {
+        // If there are 2 or fewer genres, just display them all
+        return (
+          <div className="flex flex-wrap items-center uppercase font-semibold text-[#4755A8] text-[10px] ">
+            {genres.map((genre, index) => (
+              <span
+                key={index}
+                className={`rounded-full px-3 py-1 mr-2  ${getGenreClass(genre)}`}
+              >
+                {genre.trim()}
               </span>
-              {/* Show "+X more" button if there are more genres */}
-              {!showAll && (
-                <button
-                  onClick={() => setShowAll(true)}
-                  className="text-blue-600  hover:text-blue-800"
-                >
-                  +{genres.length - 1} more
-                </button>
-              )}
-              {/* If "Show More" is clicked, display the rest */}
-              {showAll && (
-                <>
-                  {genres.slice(1).map((genre, index) => (
-                    <span
-                      key={index}
-                      className={`rounded-full px-3 py-1 mr-2 ${getGenreClass(genre)}`}
-                    >
-                      {genre.trim()}
-                    </span>
-                  ))}
-                </>
-              )}
-            </div>
-          );
-        } else {
-          // If there are 2 or fewer genres, just display them all
-          return (
-            <div className="flex flex-wrap items-center">
-              {genres.map((genre, index) => (
-                <span
-                  key={index}
-                  className={`rounded-full px-3 py-1 mr-2 ${getGenreClass(genre)}`}
-                >
-                  {genre.trim()}
-                </span>
-              ))}
-            </div>
-          );
-        }
-      };
+            ))}
+          </div>
+        );
+      }
+    };
     
 
       // const handleViewClick = (movie: any) => {

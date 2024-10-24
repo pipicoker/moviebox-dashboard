@@ -50,13 +50,13 @@ const UpcomingMovies: React.FC = () => {
     const getGenreClass = (genre: string) => {
         switch (genre.toLowerCase()) {
           case 'crime':
-            return 'bg-[#D1D8F7] text-[#4755A8]';
+            return 'bg-[#D1D8F7] ';
           case 'drama':
-            return 'bg-[#D1D8F7] text-[#4755A8]';
+            return 'bg-[#D1D8F7]  ';
           case 'comedy':
-            return 'bg-[#D1D8F7] text-[#4755A8]';
+            return 'bg-[#D1D8F7] ';
           default:
-            return 'bg-[#D1D8F7] text-[#4755A8]'; // Default color for other genres
+            return 'bg-[#D1D8F7] '; // Default color for other genres
         }
       };
 
@@ -70,16 +70,16 @@ const UpcomingMovies: React.FC = () => {
         // If there are more than 2 genres
         if (genres.length > 2) {
           return (
-            <div className="flex flex-wrap items-center">
+            <div className="flex flex-wrap items-center uppercase font-semibold text-[#4755A8] text-[10px] ">
               {/* Display only the first genre */}
-              <span className={`rounded-full px-3 py-1 mr-2 ${getGenreClass(genres[0])}`}>
+              <span className={`rounded-full px-4 py-1 mr-2 ${getGenreClass(genres[0])}`}>
                 {genres[0].trim()}
               </span>
               {/* Show "+X more" button if there are more genres */}
               {!showAll && (
                 <button
                   onClick={() => setShowAll(true)}
-                  className="text-blue-600  hover:text-blue-800"
+                  className="text-[#4755A8] text-xs font-semibold"
                 >
                   +{genres.length - 1} more
                 </button>
@@ -90,7 +90,7 @@ const UpcomingMovies: React.FC = () => {
                   {genres.slice(1).map((genre, index) => (
                     <span
                       key={index}
-                      className={`rounded-full px-3 py-1 mr-2 ${getGenreClass(genre)}`}
+                      className={`rounded-full px-4 py-1 mr-2 my-2 ${getGenreClass(genre)}`}
                     >
                       {genre.trim()}
                     </span>
@@ -102,11 +102,11 @@ const UpcomingMovies: React.FC = () => {
         } else {
           // If there are 2 or fewer genres, just display them all
           return (
-            <div className="flex flex-wrap items-center">
+            <div className="flex flex-wrap items-center uppercase font-semibold text-[#4755A8] text-[10px] ">
               {genres.map((genre, index) => (
                 <span
                   key={index}
-                  className={`rounded-full px-3 py-1 mr-2 ${getGenreClass(genre)}`}
+                  className={`rounded-full px-3 py-1 mr-2  ${getGenreClass(genre)}`}
                 >
                   {genre.trim()}
                 </span>
