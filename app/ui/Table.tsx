@@ -34,15 +34,7 @@ const Table: React.FC<TableProps> = ({ columns, data, hasPopularity }) => {
     columnWidths.Owner = "w-1/12";
   }
 
-  const columnStyles: { [key in keyof TableRow]?: string } = {
-    Name: "text-sm font-semibold",
-    Category: "text-sm font-medium",
-    Watchlists: "text-sm font-medium",
-    Owner: "text-sm font-medium",
-    PremierDate: "text-sm font-medium",
-    Streams: "text-sm font-medium",
-    ReleaseDate: "text-sm font-medium",
-  };
+  
 
   return (
     <div>
@@ -68,7 +60,7 @@ const Table: React.FC<TableProps> = ({ columns, data, hasPopularity }) => {
               {columns.map((column) => (
                 <td
                   key={column.key}
-                  className={`p-4 border-b text-sm ${columnStyles[column.key] || ""}`}
+                  className="p-4 border-b text-sm "
                 >
                   {row[column.key]}
                 </td>
