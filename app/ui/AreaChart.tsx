@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 import React, {useState} from 'react';
 // import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts'; 
-import { HiOutlineDotsVertical } from "react-icons/hi";
+import { HiDotsVertical } from "react-icons/hi";
 const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 
@@ -93,10 +93,10 @@ const AreaChart = () => {
     <div className='border rounded-lg max-h-[364px] px-6 pt-6 pb-8'>
         <div className='flex justify-between items-center'>
             <div>
-                <h2 className='font-medium'>Average watch time</h2>
+                <h2 className='font-semibold'>Average watch time</h2>
                 <p className='text-sm text-[#6A6A6A]'>This tracks the average watch by users every month</p>
             </div>
-            <HiOutlineDotsVertical />
+            <HiDotsVertical />
             
         </div>
         

@@ -11,7 +11,7 @@ export interface TableRow {
 }
 
 interface TableProps {
-  columns: { title: string; key: keyof TableRow }[];
+  columns: { title: string | JSX.Element; key: keyof TableRow }[];
   data: TableRow[];
   hasPopularity: boolean;
 }
@@ -56,7 +56,7 @@ const Table: React.FC<TableProps> = ({ columns, data, hasPopularity }) => {
                   columnWidths[column.key] || "w-auto"
                 }`}
               >
-                {column.title}
+                {typeof column.title === 'string' ? column.title : column.title}
               </th>
             ))}
           </tr>
@@ -68,7 +68,7 @@ const Table: React.FC<TableProps> = ({ columns, data, hasPopularity }) => {
               {columns.map((column) => (
                 <td
                   key={column.key}
-                  className={`p-4 border-b ${columnStyles[column.key] || ""}`}
+                  className={`p-4 border-b text-sm ${columnStyles[column.key] || ""}`}
                 >
                   {row[column.key]}
                 </td>

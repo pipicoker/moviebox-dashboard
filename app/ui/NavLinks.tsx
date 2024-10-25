@@ -17,7 +17,7 @@ const NavLinks = () => {
             <Link 
             key={index}
             href={link.href}
-            className={`link ${pathname === link.href ? 'text-white' : 'text-[#6A6A6A]'}`}
+            className={`link font-semibold ${pathname === link.href ? 'text-[#FFFFFF]' : 'text-[#6A6A6A]'}`}
             >{link.name}
             </Link>
         ))}

@@ -28,7 +28,7 @@ const MovieDetailsTable: React.FC<TableProps> = ({ columns, data }) => {
                         {columns.map((column) => (
                             <th
                                 key={column.key}
-                                className="p-2 text-sm font-semibold  text-[#000000] text-left"
+                                className="p-4 text-sm font-semibold  text-[#000000] text-left"
                                 style={{ width: columnWidth }} // Set equal width for each header
                             >
                                 {column.title}
@@ -41,7 +41,7 @@ const MovieDetailsTable: React.FC<TableProps> = ({ columns, data }) => {
                     {data.map((row, rowIndex) => (
                         <tr key={rowIndex} className="text-sm text-gray-400">
                             {columns.map((column) => (
-                                <td key={column.key} className={`p-4 text-black `} style={{ width: columnWidth }}>
+                                <td key={column.key} className={`p-4 text-[#000000] text-sm`} style={{ width: columnWidth }}>
                                     {row[column.key]}
                                 </td>
                             ))}

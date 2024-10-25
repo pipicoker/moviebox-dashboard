@@ -8,8 +8,8 @@ interface ReusableComponentProps {
 const MovieDetailsHeading: React.FC<ReusableComponentProps> = ({heading, paragraph}) => {
   return (
     <div className=''>
-        <h2 className='font-semibold'>{heading}</h2>
-        <p className='text-sm text-[6A6A6A]'>{paragraph}</p>
+        <h2 className='font-semibold text-[#000000]'>{heading}</h2>
+        <p className='text-sm text-[#6A6A6A]'>{paragraph}</p>
     </div>
   )
 }

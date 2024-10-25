@@ -19,15 +19,15 @@ const MoviesBtns = () => {
         },
     ]
   return (
-    <div className='flex space-x-4 pt-6'>
+    <div className='flex space-x-8 pt-6'>
        {buttonNames.map((button) => (
 
         <button
          key={button.id}
          onClick={() => setBtn(button.title)}
-         className={` ${btn === button.title ? 'text-[#000000] ' : 'text-[#6A6A6A]'}`}>
+         className={`font-semibold  ${btn === button.title ? 'text-[#000000] ' : 'text-[#AAAAAA] '}`}>
             {button.title}
-            <div className={` ${btn === button.title ? "w-full h-1 bg-gradient-to-r from-[#35C3F3] to-[#8B9FE8] to-[#E681D8] to-[#FFA9A4] to-[#FED2CE] to-[#FED2CE]" : 'hidden'}`}>
+            <div className={` ${btn === button.title ? "w-full h-1 bg-gradient-to-r  from-[#FFA9A4]  via-[#8B9FE8]  to-[#35C3F3]  " : 'hidden'}`}>
 
             </div>
             

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import exportIcon from "../../public/export.jpg"
+import exportIcon from "../../public/export.png"
 import filterIcon from "../../public/filter.png"
 
 interface Props {
@@ -9,7 +9,7 @@ interface Props {
 const Heading: React.FC<Props> = ({heading}) => {
   return (
     <div className='py-6 flex justify-between items-center border-b'>
-        <h1 className='text-2xl font-semibold'>{heading}</h1>
+        <h1 className='text-2xl font-bold'>{heading}</h1>
 
         <div className='flex space-x-2 text-sm'>
             <div className='flex items-center space-x-2 p-2 border rounded-lg'>

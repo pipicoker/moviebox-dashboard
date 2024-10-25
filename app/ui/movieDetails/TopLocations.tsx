@@ -10,7 +10,7 @@ const TopLocations = () => {
                   
                   <label htmlFor="file" className="w-3/12">United States</label>
                   <div className=' h-1 bg-[#F5F5F5] w-8/12'>
-                    <div style={{width: `44.5%`}} className='h-1 bg-gradient-to-r from-[#35C3F3] to-[#8B9FE8] to-[#E681D8] to-[#FFA9A4] to-[#FED2CE] to-[#FED2CE] rounded-[40px]'  >
+                    <div style={{width: `44.5%`}} className='h-1 bg-[#6A6A6A] rounded-[40px]'  >
                     </div>
                   </div>
                   <span className="w-1/12">44.5%</span>
@@ -20,7 +20,7 @@ const TopLocations = () => {
                   
                   <label htmlFor="file" className="w-3/12">South Africa</label>
                   <div className=' h-1 bg-[#F5F5F5] w-8/12'>
-                    <div style={{width: `47.1%`}} className='h-1 bg-gradient-to-r from-[#35C3F3] to-[#8B9FE8] to-[#E681D8] to-[#FFA9A4] to-[#FED2CE] to-[#FED2CE] rounded-[40px]'  >
+                    <div style={{width: `47.1%`}} className='h-1 bg-gradient-to-r  from-[#FFA9A4]  via-[#8B9FE8]  to-[#35C3F3]  rounded-[40px]'  >
                     </div>
                   </div>
                   <span className=" w-1/12">47.1%</span>
@@ -30,7 +30,7 @@ const TopLocations = () => {
                   
                   <label htmlFor="file" className="w-3/12">India</label>
                   <div className=' h-1 bg-[#F5F5F5] w-8/12'>
-                    <div style={{width: `7.7%`}} className='h-1 bg-gradient-to-r from-[#35C3F3] to-[#8B9FE8] to-[#E681D8] to-[#FFA9A4] to-[#FED2CE] to-[#FED2CE] rounded-[40px]'  >
+                    <div style={{width: `7.7%`}} className='h-1 bg-[#6A6A6A] rounded-[40px]'  >
                     </div>
                   </div>
                   <span className=" w-1/12">7.7%</span>
@@ -40,7 +40,7 @@ const TopLocations = () => {
                   
                   <label htmlFor="file" className="w-3/12">London</label>
                   <div className=' h-1 bg-[#F5F5F5] w-8/12'>
-                    <div style={{width: `0.5%`}} className='h-1 bg-gradient-to-r from-[#35C3F3] to-[#8B9FE8] to-[#E681D8] to-[#FFA9A4] to-[#FED2CE] to-[#FED2CE] rounded-[40px]'  >
+                    <div style={{width: `0.5%`}} className='h-1 bg-[#6A6A6A] rounded-[40px]'  >
                     </div>
                   </div>
                   <span className="w-1/12 ">0.5%</span>
